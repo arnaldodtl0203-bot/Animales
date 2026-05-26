@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo_animales.jpg">
+    <link rel="stylesheet" href="css/estilo_formulario.css">
+    <title>Registro de Estudiantes</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <h2 class="logo">Reino Animal</h2>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="animales_vertebrados.html">Vertebrados</a></li>
+            <li><a href="animales_invertebrados.html">Invertebrados</a></li>
+            <li><a href="formulario.html" class="active">Registro</a></li>
+        </ul>
+    </nav>
+
+    <main class="contenedor-formulario">
+        <header class="encabezado-form">
+            <h1>Formulario de Registro</h1>
+            <p>Por favor, ingresa los datos correspondientes para completar tu registro en la plataforma académica.</p>
+        </header>
+
+        <form class="form-card" action="#" method="POST" enctype="multipart/form-data">
+            
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu primer nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cedula">Cédula de Identidad:</label>
+                <input type="text" id="cedula" name="cedula" placeholder="Ej: V-12345678" required>
+            </div>
+
+            <div class="form-group radio-check-section">
+                <label class="label-titulo">Género:</label>
+                <div class="opciones-inline">
+                    <label class="radio-label">
+                        <input type="radio" name="genero" value="masculino" required> Masculino
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="genero" value="femenino"> Femenino
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="mencion">Mención:</label>
+                <select id="mencion" name="mencion" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="informatica">Informática</option>
+                    <option value="procesos quimicos">Procesos Quimicos</option>
+                    <option value="electricidad">Electricidad</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <textarea id="direccion" name="direccion" rows="3" placeholder="Escribe tu dirección de habitación completa..." required></textarea>
+            </div>
+
+            <div class="form-group radio-check-section">
+                <label class="label-titulo">Documentos Entregados:</label>
+                <div class="lista-checks">
+                    <label class="check-label">
+                        <input type="checkbox" name="documentos" value="fotos"> Fotos Tipo Carnet
+                    </label>
+                    <label class="check-label">
+                        <input type="checkbox" name="documentos" value="notas"> Certificación de Calificaciones
+                    </label>
+                    <label class="check-label">
+                        <input type="checkbox" name="documentos" value="titulo"> Fondo Negro del Título
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="archivo_cedula">Adjuntar Copia de Cédula (PDF o Imagen):</label>
+                <input type="file" id="archivo_cedula" name="archivo_cedula" accept=".pdf, .jpg, .jpeg, .png" required>
+            </div>
+
+            <button type="submit" class="btn-enviar">Registrar Información</button>
+
+        </form>
+    </main>
+
+    <footer class="pie-pagina">
+        <p>© 2026 Panel de Control de Datos Educativos</p>
+    </footer>
+
+</body>
+</html>
